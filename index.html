@@ -1,482 +1,567 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ROSSDORCOM KZ — производство металлоконструкций и промышленного оборудования в Казахстане. Расчёт по чертежам за 24 часа.">
-  <title>ROSSDORCOM KZ — Металлоконструкции и промышленное производство</title>
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ROSSDORCOM KZ — Металлоконструкции и дорожные ограждения</title>
+<meta name="description" content="Производство дорожных и мостовых ограждений, опор ЛЭП и освещения, металлоконструкций в Павлодаре.">
+<meta property="og:title" content="ROSSDORCOM KZ — Инфраструктура, созданная из металла">
+<meta property="og:description" content="Инженерные решения, производство и монтаж металлоконструкций.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/road.jpg">
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="script.js">
+</script>
 </head>
-<body>
-
-  <header class="header" id="header">
-    <div class="header__inner container">
-      <a href="#" class="header__logo" aria-label="ROSSDORCOM KZ — на главную">
-        <span class="header__logo-mark">RDC</span>
-        <span class="header__logo-text">
-          <strong>ROSSDORCOM</strong>
-          <span>Kazakhstan</span>
-        </span>
-      </a>
-
-      <nav class="header__nav" id="nav" aria-label="Основная навигация">
-        <ul class="header__nav-list">
-          <li><a href="#products" class="header__nav-link">Продукция</a></li>
-          <li><a href="#manufacturing" class="header__nav-link">Производство</a></li>
-          <li><a href="#process" class="header__nav-link">Процесс</a></li>
-          <li><a href="#expertise" class="header__nav-link">Экспертиза</a></li>
-          <li><a href="#contacts" class="header__nav-link">Контакты</a></li>
-        </ul>
-      </nav>
-
-      <div class="header__actions">
-        <a href="tel:+77771234567" class="header__phone">+7 (777) 123-45-67</a>
-        <a href="#request-form" class="btn btn--primary header__cta">Получить расчёт</a>
-        <button class="header__burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- HERO: сильный визуал -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__media">
-        <img
-          src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=80&auto=format&fit=crop"
-          alt="Сварочные работы на производстве металлоконструкций"
-          width="1920"
-          height="1080"
-          fetchpriority="high"
-        >
-        <div class="hero__overlay"></div>
-      </div>
-
-      <div class="hero__content container">
-        <p class="hero__label reveal">Промышленное производство · Казахстан</p>
-        <h1 class="hero__title reveal" id="hero-title">
-          Металлоконструкции<br>
-          <span class="hero__title-accent">под ваш проект</span>
-        </h1>
-        <p class="hero__desc reveal">
-          Проектируем, изготавливаем и монтируем конструкции любой сложности.
-          Собственный цех 12&nbsp;000&nbsp;м². Расчёт по чертежам — за 24&nbsp;часа.
-        </p>
-        <div class="hero__actions reveal">
-          <a href="#request-form" class="btn btn--primary btn--lg">Запросить расчёт</a>
-          <a href="#products" class="btn btn--ghost btn--lg">Смотреть продукцию</a>
-        </div>
-      </div>
-
-      <div class="hero__metrics container reveal">
-        <div class="metric">
-          <span class="metric__value">18+</span>
-          <span class="metric__label">лет на рынке</span>
-        </div>
-        <div class="metric">
-          <span class="metric__value">12 000</span>
-          <span class="metric__label">м² производства</span>
-        </div>
-        <div class="metric">
-          <span class="metric__value">8 500</span>
-          <span class="metric__label">тонн в год</span>
-        </div>
-        <div class="metric">
-          <span class="metric__value">340+</span>
-          <span class="metric__label">объектов</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ПРОДУКЦИЯ -->
-    <section class="section products" id="products" aria-labelledby="products-title">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__index">01</span>
-          <div class="section__header-text">
-            <h2 class="section__title" id="products-title">Продукция</h2>
-            <p class="section__subtitle">Изготавливаем по ГОСТ, EN и чертежам заказчика. Работаем с проектами от 5 до 5 000 тонн.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="products__grid">
-        <article class="product product--featured reveal">
-          <div class="product__media">
-            <img
-              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&q=80&auto=format&fit=crop"
-              alt="Несущие металлоконструкции зданий"
-              width="1200"
-              height="800"
-              loading="lazy"
-            >
-          </div>
-          <div class="product__body">
-            <span class="product__tag">Основное направление</span>
-            <h3 class="product__title">Несущие металлоконструкции</h3>
-            <p class="product__desc">Каркасы зданий, фермы, колонны, балки. Сварные и болтовые соединения. Антикоррозийная обработка по требованиям проекта.</p>
-            <dl class="product__specs">
-              <div><dt>Марки стали</dt><dd>С245–С590, 09Г2С</dd></div>
-              <div><dt>Толщина</dt><dd>4–80 мм</dd></div>
-              <div><dt>Срок</dt><dd>от 14 дней</dd></div>
-            </dl>
-            <a href="#request-form" class="product__link">Запросить расчёт →</a>
-          </div>
-        </article>
-
-        <article class="product reveal">
-          <div class="product__media">
-            <img
-              src="https://images.unsplash.com/photo-1565796639444-58e4103a4b4c?w=800&q=80&auto=format&fit=crop"
-              alt="Технологические металлоконструкции"
-              width="800"
-              height="600"
-              loading="lazy"
-            >
-          </div>
-          <div class="product__body">
-            <h3 class="product__title">Технологические конструкции</h3>
-            <p class="product__desc">Площадки обслуживания, эстакады, лестницы, ограждения, резервуарные фермы.</p>
-            <a href="#request-form" class="product__link">Запросить расчёт →</a>
-          </div>
-        </article>
-
-        <article class="product reveal">
-          <div class="product__media">
-            <img
-              src="https://images.unsplash.com/photo-1587293852724-70cdb56c2866?w=800&q=80&auto=format&fit=crop"
-              alt="Сварные металлоконструкции"
-              width="800"
-              height="600"
-              loading="lazy"
-            >
-          </div>
-          <div class="product__body">
-            <h3 class="product__title">Сварные узлы и закладные</h3>
-            <p class="product__desc">Нестандартные узлы, закладные детали, фланцевые соединения. Контроль качества швов УЗК.</p>
-            <a href="#request-form" class="product__link">Запросить расчёт →</a>
-          </div>
-        </article>
-
-        <article class="product reveal">
-          <div class="product__media">
-            <img
-              src="https://images.unsplash.com/photo-1613665813447-82a657b278e2?w=800&q=80&auto=format&fit=crop"
-              alt="Металлоконструкции для инфраструктуры"
-              width="800"
-              height="600"
-              loading="lazy"
-            >
-          </div>
-          <div class="product__body">
-            <h3 class="product__title">Инфраструктурные объекты</h3>
-            <p class="product__desc">Мостовые пролёты, опоры ЛЭП, навесы, ангары, складские комплексы.</p>
-            <a href="#request-form" class="product__link">Запросить расчёт →</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ПРОИЗВОДСТВО -->
-    <section class="section manufacturing" id="manufacturing" aria-labelledby="manufacturing-title">
-      <div class="manufacturing__hero reveal">
-        <img
-          src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1920&q=80&auto=format&fit=crop"
-          alt="Производственный цех ROSSDORCOM"
-          width="1920"
-          height="800"
-          loading="lazy"
-        >
-        <div class="manufacturing__hero-overlay"></div>
-        <div class="manufacturing__hero-content container">
-          <span class="section__index section__index--light">02</span>
-          <h2 class="manufacturing__title" id="manufacturing-title">Собственное производство</h2>
-          <p class="manufacturing__intro">Полный цикл — от раскроя листа до отгрузки готовой конструкции. Без посредников и скрытых субподрядов.</p>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="manufacturing__capabilities">
-          <article class="capability reveal">
-            <span class="capability__num">A</span>
-            <h3 class="capability__title">Раскрой и заготовка</h3>
-            <p class="capability__desc">Плазменная и газовая резка, ленточнопильные станки. Точность раскроя ±1 мм. Оптимизация раскладки — экономия металла до 12%.</p>
-            <ul class="capability__list">
-              <li>Plasma cutting до 40 мм</li>
-              <li>Guillotine shear до 16 мм</li>
-              <li>Drilling lines</li>
-            </ul>
-          </article>
-
-          <article class="capability reveal">
-            <span class="capability__num">B</span>
-            <h3 class="capability__title">Сборка и сварка</h3>
-            <p class="capability__desc">Сварочные посты MIG/MAG, TIG, SAW. Аттестованные сварщики НАКС. Контроль геометрии на каждом этапе сборки.</p>
-            <ul class="capability__list">
-              <li>12 сварочных постов</li>
-              <li>Кран-балки до 32 т</li>
-              <li>Turning-over tables</li>
-            </ul>
-          </article>
-
-          <article class="capability reveal">
-            <span class="capability__num">C</span>
-            <h3 class="capability__title">Антикор и покрытия</h3>
-            <p class="capability__desc">Пескоструйная обработка Sa 2½, грунтование, финишная окраска. Камера окраски 18×6×5 м.</p>
-            <ul class="capability__list">
-              <li>Цинкование горячее</li>
-              <li>Эпоксидные системы</li>
-              <li>Цинк-наполненные грунты</li>
-            </ul>
-          </article>
-
-          <article class="capability reveal">
-            <span class="capability__num">D</span>
-            <h3 class="capability__title">ОТК и отгрузка</h3>
-            <p class="capability__desc">Входной контроль материалов, промежуточный и финальный осмотр. Маркировка элементов по монтажным схемам.</p>
-            <ul class="capability__list">
-              <li>УЗК швов</li>
-              <li>Geometric control</li>
-              <li>Packaging & logistics</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="manufacturing__cta reveal">
-          <p>Нужен аудит производственных мощностей или выезд на объект?</p>
-          <a href="#request-form" class="btn btn--primary">Запросить расчёт и консультацию</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ПРОЦЕСС -->
-    <section class="section process" id="process" aria-labelledby="process-title">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__index">03</span>
-          <div class="section__header-text">
-            <h2 class="section__title" id="process-title">Как мы работаем</h2>
-            <p class="section__subtitle">Прозрачный процесс от первого обращения до сдачи объекта. Вы знаете срок и стоимость до начала производства.</p>
-          </div>
-        </div>
-
-        <ol class="process__timeline">
-          <li class="process__step reveal">
-            <span class="process__step-num">01</span>
-            <div class="process__step-content">
-              <h3 class="process__step-title">Заявка и ТЗ</h3>
-              <p>Отправляете чертежи, спецификацию или эскиз. Мы уточняем объём, сроки, требования к материалам и покрытиям.</p>
-            </div>
-          </li>
-          <li class="process__step reveal">
-            <span class="process__step-num">02</span>
-            <div class="process__step-content">
-              <h3 class="process__step-title">Инженерный расчёт</h3>
-              <p>КМ/КМД, расчёт нагрузок, спецификация металла. Коммерческое предложение с детализацией — в течение 24 часов.</p>
-            </div>
-          </li>
-          <li class="process__step reveal">
-            <span class="process__step-num">03</span>
-            <div class="process__step-content">
-              <h3 class="process__step-title">Производство</h3>
-              <p>Закупка металла, раскрой, сборка, сварка, антикор. Еженедельные фотоотчёты с площадки по запросу.</p>
-            </div>
-          </li>
-          <li class="process__step reveal">
-            <span class="process__step-num">04</span>
-            <div class="process__step-content">
-              <h3 class="process__step-title">Логистика и монтаж</h3>
-              <p>Доставка по KZ и СНГ. Шефмонтаж, строповка, выверка. Передача исполнительной документации.</p>
-            </div>
-          </li>
-          <li class="process__step reveal">
-            <span class="process__step-num">05</span>
-            <div class="process__step-content">
-              <h3 class="process__step-title">Сдача и гарантия</h3>
-              <p>Акт выполненных работ, паспорта на конструкции. Гарантия на сварные швы и покрытия — 24 месяца.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ТЕХНИЧЕСКАЯ ЭКСПЕРТИЗА -->
-    <section class="section expertise" id="expertise" aria-labelledby="expertise-title">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__index">04</span>
-          <div class="section__header-text">
-            <h2 class="section__title" id="expertise-title">Техническая экспертиза</h2>
-            <p class="section__subtitle">Инженерный отдел, сертифицированные процессы и документированное качество — не маркетинговые обещания, а рабочие стандарты.</p>
-          </div>
-        </div>
-
-        <div class="expertise__layout">
-          <div class="expertise__panel reveal">
-            <h3 class="expertise__panel-title">Стандарты и нормативы</h3>
-            <table class="expertise__table">
-              <tbody>
-                <tr>
-                  <th scope="row">Проектирование</th>
-                  <td>СП 16.13330, EN 1993, SNiP 2.03.01</td>
-                </tr>
-                <tr>
-                  <th scope="row">Сварка</th>
-                  <td>ГОСТ 5264, 14771, ISO 3834-2</td>
-                </tr>
-                <tr>
-                  <th scope="row">Материалы</th>
-                  <td>ГОСТ 27772, 19281, EN 10025</td>
-                </tr>
-                <tr>
-                  <th scope="row">Покрытия</th>
-                  <td>ISO 12944, ГОСТ 9.032</td>
-                </tr>
-                <tr>
-                  <th scope="row">Контроль</th>
-                  <td>ГОСТ 3242, ISO 17640 (УЗК)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="expertise__panel expertise__panel--accent reveal">
-            <h3 class="expertise__panel-title">Инженерная поддержка</h3>
-            <ul class="expertise__list">
-              <li>
-                <strong>КМ / КМД</strong>
-                <span>Разработка и адаптация проектной документации под производственные возможности</span>
-              </li>
-              <li>
-                <strong>Авторский надзор</strong>
-                <span>Консультации на этапе монтажа, корректировка узлов на площадке</span>
-              </li>
-              <li>
-                <strong>Технический аудит</strong>
-                <span>Оценка существующих конструкций, заключения для экспертизы</span>
-              </li>
-              <li>
-                <strong>Оптимизация</strong>
-                <span>Снижение металлоёмкости без потери несущей способности</span>
-              </li>
-            </ul>
-            <a href="#request-form" class="btn btn--primary btn--block">Обсудить проект с инженером</a>
-          </div>
-
-          <figure class="expertise__visual reveal">
-            <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&q=80&auto=format&fit=crop"
-              alt="Инженер проверяет чертежи металлоконструкций"
-              width="900"
-              height="700"
-              loading="lazy"
-            >
-            <figcaption>Инженерный отдел · 14 специалистов</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ФОРМА ЗАЯВКИ -->
-    <section class="section request" id="request-form" aria-labelledby="request-title">
-      <div class="container request__grid">
-        <div class="request__info reveal">
-          <span class="section__index">05</span>
-          <h2 class="request__title" id="request-title">Заявка на расчёт</h2>
-          <p class="request__desc">
-            Прикрепите чертежи или опишите задачу — подготовим коммерческое предложение
-            с детализацией по металлу, срокам и стоимости в течение 24&nbsp;часов.
-          </p>
-
-          <ul class="request__checklist">
-            <li>Чертежи КМ/КМД или эскиз</li>
-            <li>Объём и марки стали</li>
-            <li>Требования к покрытию</li>
-            <li>Адрес объекта и сроки</li>
-          </ul>
-
-          <div class="request__contacts" id="contacts">
-            <a href="tel:+77771234567" class="request__contact">+7 (777) 123-45-67</a>
-            <a href="mailto:info@rossdorcom.kz" class="request__contact">info@rossdorcom.kz</a>
-            <address class="request__address">
-              г. Алматы, промзона «Жайсан»,<br>
-              ул. Промышленная 14
-            </address>
-          </div>
-        </div>
-
-        <form class="request__form reveal" id="form" novalidate>
-          <div class="form__group">
-            <label for="name" class="form__label">Имя</label>
-            <input type="text" id="name" name="name" class="form__input" required autocomplete="name" placeholder="Иван Петров">
-          </div>
-
-          <div class="form__group">
-            <label for="company" class="form__label">Компания</label>
-            <input type="text" id="company" name="company" class="form__input" required autocomplete="organization" placeholder="ТОО «СтройМонтаж»">
-          </div>
-
-          <div class="form__row">
-            <div class="form__group">
-              <label for="phone" class="form__label">Телефон</label>
-              <input type="tel" id="phone" name="phone" class="form__input" required autocomplete="tel" placeholder="+7 (___) ___-__-__">
-            </div>
-            <div class="form__group">
-              <label for="email" class="form__label">Email</label>
-              <input type="email" id="email" name="email" class="form__input" required autocomplete="email" placeholder="mail@company.kz">
-            </div>
-          </div>
-
-          <div class="form__group">
-            <label for="message" class="form__label">Описание задачи</label>
-            <textarea id="message" name="message" class="form__textarea" rows="4" placeholder="Объём, тип конструкций, сроки, адрес объекта…"></textarea>
-          </div>
-
-          <div class="form__group">
-            <label for="file" class="form__label">Чертежи / спецификация</label>
-            <input type="file" id="file" name="file" class="form__file" accept=".pdf,.dwg,.dxf,.zip,.rar">
-            <span class="form__hint">PDF, DWG, DXF, ZIP — до 20 МБ</span>
-          </div>
-
-          <label class="form__checkbox">
-            <input type="checkbox" id="consent" name="consent" required>
-            <span>Согласен на обработку персональных данных</span>
-          </label>
-
-          <button type="submit" class="btn btn--primary btn--lg btn--block">Отправить на расчёт</button>
-
-          <p class="form__success" id="form-success" hidden>
-            Заявка отправлена. Инженер свяжется с вами в течение 2 часов в рабочее время.
-          </p>
-        </form>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <span class="footer__logo">ROSSDORCOM KZ</span>
-        <p class="footer__copy">&copy; 2026 ROSSDORCOM Kazakhstan. Все права защищены.</p>
-      </div>
-      <nav class="footer__nav" aria-label="Нижняя навигация">
-        <a href="#products">Продукция</a>
-        <a href="#manufacturing">Производство</a>
-        <a href="#process">Процесс</a>
-        <a href="#expertise">Экспертиза</a>
-        <a href="#request-form">Расчёт</a>
-      </nav>
-    </div>
-  </footer>
-
-  <a href="#request-form" class="floating-cta" id="floating-cta" aria-label="Получить расчёт">
-    Получить расчёт
-  </a>
-
-  <script src="js/main.js"></script>
+<body data-root=".">
+<header class="site-header" data-header>
+<a class="brand" href="index.html" aria-label="ROSSDORCOM KZ — главная">
+<img src="assets/images/logo.png" alt="">
+<span>ROSSDORCOM KZ</span>
+</a>
+<nav class="desktop-nav" aria-label="Основная навигация">
+<a href="#about">О компании</a>
+<a href="#products">Продукция</a>
+<a href="#production">Производство</a>
+<a href="#services">Услуги</a>
+<a href="#certificates">Сертификаты</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Контакты</a>
+<a href="catalog.html">Каталог</a>
+</nav>
+<a class="header-cta magnetic" href="#contact">Оставить заявку <span>↗</span>
+</a>
+<button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+<span>
+</span>
+<span>
+</span>
+</button>
+</header>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+<div class="mobile-menu-inner">
+<p class="micro">Навигация / 2026</p>
+<nav aria-label="Мобильная навигация">
+<a href="#about">
+<i>01</i>О компании</a>
+<a href="#products">
+<i>02</i>Продукция</a>
+<a href="#production">
+<i>03</i>Производство</a>
+<a href="#services">
+<i>04</i>Услуги</a>
+<a href="#certificates">
+<i>05</i>Сертификаты</a>
+<a href="#faq">
+<i>06</i>FAQ</a>
+<a href="catalog.html">
+<i>07</i>Каталог</a>
+<a href="#contact">
+<i>08</i>Контакты</a>
+</nav>
+</div>
+</div>
+<main>
+<section class="hero" id="top" data-theme="dark">
+<div class="hero-media parallax">
+<img src="assets/images/factory.jpg" alt="Производственная линия ROSSDORCOM KZ" fetchpriority="high">
+</div>
+<div class="hero-shade">
+</div>
+<div class="hero-content shell">
+<div class="hero-manifest"><span>ROSSDORCOM KZ</span><span>SYSTEM / INFRASTRUCTURE</span></div>
+<div class="hero-plates" aria-label="Производственные показатели">
+<div class="engineering-plate plate-area" data-depth="1"><small>PRODUCTION AREA</small><strong>5 000+ M²</strong></div>
+<div class="engineering-plate plate-capacity" data-depth="1.35"><small>CAPACITY</small><strong>70+ KM</strong><span>PER MONTH</span></div>
+</div>
+<p class="hero-kicker reveal-line">Инжиниринг · Производство · Монтаж</p>
+<h1 aria-label="Инфраструктура, созданная из металла">
+<span>Инфраструктура,</span>
+<span>созданная</span>
+<span>из металла.</span>
+</h1>
+<div class="hero-foot">
+<p>Производим дорожные и мостовые ограждения, опоры ЛЭП и освещения, металлоконструкции и другие решения для инфраструктуры.</p>
+<div class="hero-data"><span>PAVLODAR / KZ</span><span>EST. 2013</span><span>30+ PRODUCT TYPES</span></div>
+<div class="hero-actions">
+<a class="button button-red magnetic" href="#contact">Обсудить проект <span>→</span>
+</a>
+<a class="text-link" href="#products">Смотреть продукцию <span>↓</span>
+</a>
+</div>
+</div>
+</div>
+<div class="hero-index">PAVLODAR / KZ <b>01</b>
+</div>
+</section>
+<section class="brand-statement" data-theme="light">
+<div class="shell statement-grid">
+<p class="micro">SYSTEM / FULL CYCLE</p>
+<h2><span>От инженерной задачи</span><span>до готовой конструкции</span><em>внутри одной производственной системы.</em></h2>
+<p>Проектирование, изготовление, защита, логистика и монтаж объединены в одной инженерной цепочке.</p>
+</div>
+<figure class="statement-image image-reveal"><img src="assets/images/road-machine.jpg" alt="Монтаж дорожного ограждения ROSSDORCOM KZ" loading="lazy"><figcaption><span>APPLICATION / ROAD SYSTEMS</span><span>INSTALLATION / KAZAKHSTAN</span></figcaption></figure>
+</section>
+<section class="about section shell" id="about" data-theme="light">
+<div class="section-label">
+<span>01</span>
+<p>О компании</p>
+</div>
+<div class="about-grid">
+<div>
+<h2 class="display reveal">От проектирования<br>
+до готовой конструкции.<br>
+<em>Всё внутри одной системы.</em>
+</h2>
+<p class="body-copy reveal">ROSSDORCOM KZ — инжиниринговая компания с собственной производственной базой. Компания готовит техническое задание и чертежи, производит детали, узлы и оборудование, выполняет монтаж и обслуживание.</p>
+</div>
+</div>
+<div class="stats" aria-label="Показатели компании">
+<article>
+<strong>2013</strong>
+<p>работаем<br>на рынке</p>
+</article>
+<figure class="about-image">
+<img src="assets/images/warehouse.jpg" alt="Готовые металлоконструкции на производственной базе" loading="lazy">
+<figcaption>
+<span>Производственная база</span>
+<span>Павлодар</span>
+</figcaption>
+</figure>
+<article>
+<strong>
+<span data-count="5000">0</span>
+<sup>+ м²</sup>
+</strong>
+<p>площадь<br>производства</p>
+</article>
+<article>
+<strong>
+<span data-count="150">0</span>
+<sup>+</sup>
+</strong>
+<p>рабочих<br>мест</p>
+</article>
+<article>
+<strong>
+<span data-count="30">0</span>
+<sup>+</sup>
+</strong>
+<p>видов<br>продукции</p>
+</article>
+<article>
+<strong>
+<span data-count="70">0</span>
+<sup>+ км</sup>
+</strong>
+<p>ограждения<br>в месяц</p>
+</article>
+</div>
+</section>
+<section class="products section" id="products" data-theme="light">
+<div class="shell">
+<div class="section-label">
+<span>02</span>
+<p>Продукция</p>
+<a class="text-link dark-link" href="catalog.html">Смотреть каталог <span>→</span>
+</a>
+</div>
+<div class="products-intro">
+<h2 class="display reveal">Конструкции для<br>
+<em>реальной инфраструктуры.</em>
+</h2>
+</div>
+<div class="product-list">
+<a class="product-row" href="products/road-systems.html">
+<div class="product-copy">
+<p class="micro">01 / ROAD SYSTEMS</p>
+<div class="product-index">01</div>
+<h3>Дорожные и мостовые<br>ограждения</h3>
+<p>Секции балок, стойки, консоли и световозвращающие элементы для дорожной инфраструктуры.</p>
+<span class="row-link">Подробнее <b>↗</b>
+</span>
+</div>
+<div class="product-media">
+<img src="assets/images/road-machine.jpg" alt="Монтаж дорожного барьерного ограждения" loading="lazy">
+</div>
+</a>
+<a class="product-row reverse" href="products/power.html">
+<div class="product-copy">
+<p class="micro">02 / POWER</p>
+<div class="product-index">02</div>
+<h3>Опоры ЛЭП<br>и освещения</h3>
+<p>Металлические опоры для линий электропередач и систем освещения.</p>
+<span class="row-link">Подробнее <b>↗</b>
+</span>
+</div>
+<div class="product-media">
+<img src="assets/images/power.jpg" alt="Опора линии электропередач" loading="lazy">
+</div>
+</a>
+<a class="product-row" href="products/engineering.html">
+<div class="product-copy">
+<p class="micro">03 / ENGINEERING</p>
+<div class="product-index">03</div>
+<h3>Металлоконструкции</h3>
+<p>Изготовление деталей, узлов и конструкций по техническому заданию и чертежам заказчика.</p>
+<span class="row-link">Подробнее <b>↗</b>
+</span>
+</div>
+<div class="product-media">
+<img src="assets/images/warehouse.jpg" alt="Готовые металлические опоры на складе" loading="lazy">
+</div>
+</a>
+</div>
+</div>
+</section>
+<section class="production" id="production" data-theme="dark">
+<div class="production-media parallax">
+<img src="assets/images/rail.jpg" alt="Отгрузка готовых металлоконструкций" loading="lazy">
+</div>
+<div class="production-overlay">
+</div>
+<div class="production-content shell">
+<div class="section-label light">
+<span>03</span>
+<p>Производство</p>
+</div>
+<h2 class="display reveal">Собственное<br>
+<em>производство.</em>
+</h2>
+<p>Оборудование, инженеры и контроль производства находятся внутри одной системы — без разрыва между проектированием и изготовлением.</p>
+</div>
+</section>
+<section class="process section" data-theme="dark">
+<div class="shell">
+<p class="micro muted">Производственный цикл</p>
+<div class="process-grid">
+<article>
+<i>01</i>
+<h3>Техническое задание</h3>
+<p>Изучаем требования и готовим решение совместно с заказчиком.</p>
+</article>
+<article>
+<i>02</i>
+<h3>Проектирование</h3>
+<p>Разрабатываем чертежи на собственной инженерно-технической базе.</p>
+</article>
+<article>
+<i>03</i>
+<h3>Изготовление</h3>
+<p>Производим детали, узлы и металлоконструкции.</p>
+</article>
+<article>
+<i>04</i>
+<h3>Монтаж и сервис</h3>
+<p>Выполняем монтаж, пусконаладку и обслуживание.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="clients" id="clients" data-theme="light" aria-labelledby="clients-title">
+<div class="shell clients-heading">
+<div class="section-label">
+<span>TRUST</span>
+<p>Проверенные партнёры</p>
+</div>
+<div class="clients-title-row">
+<h2 class="display reveal" id="clients-title">Нам<br><em>доверяют.</em></h2>
+<p>Инфраструктурные и строительные организации Казахстана и Центральной Азии.</p>
+</div>
+</div>
+<div class="client-marquee" aria-label="Клиенты и партнёры ROSSDORCOM KZ">
+<div class="client-track" data-client-track></div>
+</div>
+</section>
+<section class="services section shell" id="services" data-theme="light">
+<div class="section-label">
+<span>04</span>
+<p>Услуги</p>
+</div>
+<h2 class="display reveal">Комплексная работа.<br>
+<em>От чертежа до объекта.</em>
+</h2>
+<div class="service-rows">
+<article data-service-image="assets/images/factory.jpg">
+<span>01</span>
+<h3>Производство металлоконструкций</h3>
+<b>↗</b>
+</article>
+<article data-service-image="assets/images/warehouse.jpg">
+<span>02</span>
+<h3>Изготовление по чертежам</h3>
+<b>↗</b>
+</article>
+<article data-service-image="assets/images/galvanizing.jpg">
+<span>03</span>
+<h3>Антикоррозийная защита</h3>
+<b>↗</b>
+</article>
+<article data-service-image="assets/images/logistics.jpg">
+<span>04</span>
+<h3>Доставка</h3>
+<b>↗</b>
+</article>
+<article data-service-image="assets/images/road.jpg">
+<span>05</span>
+<h3>Монтаж</h3>
+<b>↗</b>
+</article>
+</div>
+<div class="service-preview" aria-hidden="true">
+<img src="assets/images/factory.jpg" alt="">
+</div>
+</section>
+<section class="story" aria-label="Направления ROSSDORCOM">
+<div class="story-sticky">
+<div class="story-track">
+<article>
+<img src="assets/images/road.jpg" alt="Дорожная инфраструктура" loading="lazy">
+<div>
+<i>01</i>
+<h2>ROAD<br>SYSTEMS</h2>
+<p>Дороги и мосты</p>
+</div>
+</article>
+<article>
+<img src="assets/images/power.jpg" alt="Энергетическая инфраструктура" loading="lazy">
+<div>
+<i>02</i>
+<h2>POWER</h2>
+<p>ЛЭП и освещение</p>
+</div>
+</article>
+<article>
+<img src="assets/images/factory.jpg" alt="Производство металлоконструкций" loading="lazy">
+<div>
+<i>03</i>
+<h2>ENGINEERING</h2>
+<p>Детали и узлы</p>
+</div>
+</article>
+<article>
+<img src="assets/images/logistics.jpg" alt="Логистика готовой продукции" loading="lazy">
+<div>
+<i>04</i>
+<h2>LOGISTICS</h2>
+<p>Авто и ж/д перевозки</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="certificates section" id="certificates" data-theme="light">
+<div class="shell">
+<div class="section-label">
+<span>05</span>
+<p>Документы</p>
+</div>
+<h2 class="display reveal">Качество, которое<br>
+<em>можно проверить.</em>
+</h2>
+<p class="certificate-note">Нажмите на документ, чтобы открыть его в полном размере.</p>
+</div>
+<div class="cert-marquee">
+<div class="cert-track" data-cert-track>
+</div>
+</div>
+</section>
+<section class="industries" aria-label="Отрасли">
+<div class="industry-track">
+<span>АВТОДОРОГИ</span>
+<i>◆</i>
+<span>МОСТЫ</span>
+<i>◆</i>
+<span>ЭНЕРГЕТИКА</span>
+<i>◆</i>
+<span>ПРОМЫШЛЕННОСТЬ</span>
+<i>◆</i>
+<span>МАШИНОСТРОЕНИЕ</span>
+<i>◆</i>
+<span>ЛОГИСТИКА</span>
+<i>◆</i>
+<span>АВТОДОРОГИ</span>
+<i>◆</i>
+<span>МОСТЫ</span>
+<i>◆</i>
+<span>ЭНЕРГЕТИКА</span>
+<i>◆</i>
+<span>ПРОМЫШЛЕННОСТЬ</span>
+<i>◆</i>
+<span>МАШИНОСТРОЕНИЕ</span>
+<i>◆</i>
+<span>ЛОГИСТИКА</span>
+<i>◆</i>
+</div>
+</section>
+<section class="faq section shell" id="faq" data-theme="light">
+<div class="section-label">
+<span>06</span>
+<p>FAQ</p>
+</div>
+<div class="faq-grid">
+<h2 class="display reveal">До начала<br>
+<em>проекта.</em>
+</h2>
+<div class="faq-list">
+<article>
+<button aria-expanded="false">
+<span>Можно ли изготовить конструкцию по нашим чертежам?</span>
+<i>+</i>
+</button>
+<div class="answer">
+<p>Да. Компания производит оснастку, детали, узлы и оборудование по техническому заданию и чертежам заказчика.</p>
+</div>
+</article>
+<article>
+<button aria-expanded="false">
+<span>Как осуществляется доставка?</span>
+<i>+</i>
+</button>
+<div class="answer">
+<p>Доступны самовывоз, автомобильные перевозки с привлечением транспортных компаний и железнодорожные перевозки. Условия согласуются с менеджером.</p>
+</div>
+</article>
+<article>
+<button aria-expanded="false">
+<span>Осуществляете ли вы монтаж?</span>
+<i>+</i>
+</button>
+<div class="answer">
+<p>Да. Мобильные бригады выполняют монтаж и демонтаж ограждений и других металлоконструкций на объектах.</p>
+</div>
+</article>
+<article>
+<button aria-expanded="false">
+<span>Есть ли сертификаты?</span>
+<i>+</i>
+</button>
+<div class="answer">
+<p>Да. Подтверждающие документы представлены в разделе «Сертификаты». Актуальность конкретного документа уточните у специалиста ROSSDORCOM.</p>
+</div>
+</article>
+<article>
+<button aria-expanded="false">
+<span>Как получить расчёт стоимости?</span>
+<i>+</i>
+</button>
+<div class="answer">
+<p>Оставьте контакты и кратко опишите задачу. Специалист уточнит параметры, необходимые для расчёта.</p>
+</div>
+</article>
+<article>
+<button aria-expanded="false">
+<span>Работаете ли вы с регионами Казахстана и СНГ?</span>
+<i>+</i>
+</button>
+<div class="answer">
+<p>Компания указывает возможность доставки и выезда монтажных бригад по Казахстану и в страны СНГ. Уточните доступность для вашего объекта у специалиста.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="contact" id="contact" data-theme="dark">
+<video class="contact-video" autoplay muted loop playsinline preload="metadata" poster="assets/images/factory.jpg" aria-hidden="true">
+<source src="assets/media/contact-industrial.mp4" type="video/mp4">
+</video>
+<div class="contact-video-shade" aria-hidden="true"></div>
+<div class="shell">
+<div class="section-label light">
+<span>07</span>
+<p>Контакты</p>
+</div>
+<div class="contact-grid">
+<div>
+<h2 class="display reveal">Есть<br>
+<em>проект?</em>
+</h2>
+<p>Расскажите нам о задаче — специалист ROSSDORCOM свяжется с вами.</p>
+<address>Павлодар<br>ул. Космонавтов, 1/26<br>
+<a href="tel:+77182730055">+7 (7182) 73-00-55</a>
+<br>
+<a href="tel:+77056000534">+7 (705) 600-05-34</a>
+<br>
+<a href="mailto:info@rossdorcom.kz">info@rossdorcom.kz</a>
+</address>
+</div>
+<form class="contact-form" data-contact-form novalidate>
+<label>
+<span>Ваше имя *</span>
+<input name="name" autocomplete="name" required minlength="2" placeholder="Имя">
+<small>
+</small>
+</label>
+<label>
+<span>Номер телефона *</span>
+<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="+7 (___) ___-__-__">
+<small>
+</small>
+</label>
+<label>
+<span>Комментарий / задача</span>
+<textarea name="message" rows="4" placeholder="Коротко о проекте">
+</textarea>
+</label>
+<button class="button button-red magnetic" type="submit">Оставить заявку <span>→</span>
+</button>
+<div class="form-success" role="status" tabindex="-1">
+<strong>Данные проверены.</strong>
+<span>Свяжитесь с отделом проектов по телефону или электронной почте.</span>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="shell footer-grid">
+<a class="brand footer-brand" href="index.html">
+<img src="assets/images/logo.png" alt="">
+<span>ROSSDORCOM KZ</span>
+</a>
+<div>
+<p>Навигация</p>
+<a href="#about">О компании</a>
+<a href="#products">Продукция</a>
+<a href="#production">Производство</a>
+<a href="#contact">Контакты</a>
+</div>
+<div>
+<p>Документы</p>
+<a href="catalog.html">Каталог продукции</a>
+<a href="#certificates">Сертификаты</a>
+</div>
+<div>
+<p>Павлодар</p>
+<span>ул. Космонавтов, 1/26</span>
+<a href="tel:+77182730055">+7 (7182) 73-00-55</a>
+<a href="mailto:info@rossdorcom.kz">info@rossdorcom.kz</a>
+</div>
+</div>
+<div class="shell footer-bottom">
+<span>© 2026 ROSSDORCOM KZ</span>
+<a href="#top">Наверх ↑</a>
+</div>
+</footer>
+<div class="certificate-modal" role="dialog" aria-modal="true" aria-label="Просмотр сертификата" aria-hidden="true">
+<button type="button" class="modal-close" aria-label="Закрыть">×</button>
+<img src="assets/certificates/certificate-01.png" alt="Сертификат ROSSDORCOM KZ">
+<span class="modal-count">
+</span>
+</div>
+<div class="client-modal" role="dialog" aria-modal="true" aria-labelledby="client-modal-title" aria-hidden="true">
+<div class="client-modal-panel">
+<button type="button" class="client-modal-close" aria-label="Закрыть">×</button>
+<span class="micro">TRUSTED / PARTNER</span>
+<img src="assets/clients/qazavtojol.png" alt="">
+<h3 id="client-modal-title"></h3>
+<p></p>
+</div>
+</div>
+<div class="cursor-dot">
+</div>
+<div class="cursor-ring">
+</div>
 </body>
 </html>
