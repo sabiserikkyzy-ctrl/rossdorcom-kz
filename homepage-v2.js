@@ -1,5 +1,3 @@
-import { totalEquipment } from './js/equipment-data.js';
-
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const header = document.querySelector('[data-header]');
 const menuButton = document.querySelector('.menu-toggle');
@@ -53,23 +51,55 @@ if (innerWidth <= 900) {
   productItems.forEach((item) => productObserver.observe(item));
 }
 
-const totalNode = document.querySelector('[data-equipment-total]');
-if (totalNode) totalNode.textContent = totalEquipment;
-
 const form = document.querySelector('[data-contact-form]');
 const validate = (input) => {
   let message = '';
   if (input.name === 'name' && input.value.trim().length < 2) message = 'Укажите имя.';
-  if (input.name === 'phone' && input.value.replace(/\D/g, '').length < 10) message = 'Укажите корректный номер.';
+  if (input.name === 'phone') {
+    const digits = input.value.replace(/\D/g, '');
+    if (digits.length < 10 || digits.length > 15) message = 'Укажите корректный номер.';
+  }
   input.closest('label').querySelector('small').textContent = message;
   return !message;
 };
-form?.addEventListener('submit', (event) => {
+form?.addEventListener('submit', async (event) => {
   event.preventDefault();
   const fields = [...form.querySelectorAll('[required]')];
   if (!fields.map(validate).every(Boolean)) { fields.find((field) => !validate(field))?.focus(); return; }
   const status = form.querySelector('.form-status');
-  status.textContent = 'Данные проверены. Свяжитесь с отделом проектов по телефону или электронной почте.';
-  status.focus();
+  const submitButton = form.querySelector('[type="submit"]');
+  const submitLabel = form.querySelector('[data-submit-label]');
+  const originalLabel = submitLabel?.textContent;
+  status.textContent = '';
+  status.className = 'form-status';
+  submitButton.disabled = true;
+  form.setAttribute('aria-busy', 'true');
+  if (submitLabel) submitLabel.textContent = 'Отправляем...';
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: form.elements.name.value,
+        phone: form.elements.phone.value,
+        message: form.elements.message.value,
+        website: form.elements.website.value,
+        page: location.href
+      })
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || !result.ok || !result.stored) throw new Error('Lead was not stored');
+    form.reset();
+    status.textContent = 'Заявка отправлена. Специалист ТОО «ROSSDORCOM KZ» свяжется с вами в ближайшее время.';
+    status.classList.add('is-success');
+  } catch (error) {
+    status.textContent = 'Не удалось отправить заявку. Позвоните нам или напишите на info@rossdorcom.kz.';
+    status.classList.add('is-error');
+  } finally {
+    submitButton.disabled = false;
+    form.removeAttribute('aria-busy');
+    if (submitLabel) submitLabel.textContent = originalLabel;
+    status.focus();
+  }
 });
 form?.querySelectorAll('[required]').forEach((input) => input.addEventListener('blur', () => validate(input)));

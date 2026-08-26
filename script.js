@@ -160,13 +160,13 @@
   const certTrack = document.querySelector('[data-cert-track]');
   if (certTrack) [...certs, ...certs].forEach((src, index) => {
     const button = document.createElement('button'); button.type = 'button'; button.className = 'cert-button'; button.dataset.index = String(index % certs.length); button.setAttribute('aria-label', `Открыть сертификат ${index % certs.length + 1}`);
-    const img = document.createElement('img'); img.src = src; img.alt = `Сертификат ROSSDORCOM KZ ${index % certs.length + 1}`; img.loading = 'lazy'; button.append(img); certTrack.append(button);
+    const img = document.createElement('img'); img.src = src; img.alt = `Сертификат ТОО «ROSSDORCOM KZ» ${index % certs.length + 1}`; img.loading = 'lazy'; button.append(img); certTrack.append(button);
   });
   const modal = document.querySelector('.certificate-modal'), modalImage = modal?.querySelector('img'), modalCount = modal?.querySelector('.modal-count'), modalClose = modal?.querySelector('.modal-close'); let lastFocus;
   const closeModal = () => { if (!modal) return; modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true'); document.body.classList.remove('locked'); lastFocus?.focus(); };
   certTrack?.addEventListener('pointerdown', () => certTrack.classList.add('is-paused'), { capture: true });
   certTrack?.addEventListener('pointerleave', () => certTrack.classList.remove('is-paused'));
-  certTrack?.addEventListener('click', e => { const button = e.target.closest('.cert-button'); if (!button || !modal || !modalImage) return; lastFocus = button; const index = Number(button.dataset.index); modalImage.src = certs[index]; modalImage.alt = `Сертификат ROSSDORCOM KZ ${index + 1}`; if (modalCount) modalCount.textContent = `${String(index + 1).padStart(2, '0')} / 08`; modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); document.body.classList.add('locked'); modalClose?.focus(); });
+  certTrack?.addEventListener('click', e => { const button = e.target.closest('.cert-button'); if (!button || !modal || !modalImage) return; lastFocus = button; const index = Number(button.dataset.index); modalImage.src = certs[index]; modalImage.alt = `Сертификат ТОО «ROSSDORCOM KZ» ${index + 1}`; if (modalCount) modalCount.textContent = `${String(index + 1).padStart(2, '0')} / 08`; modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); document.body.classList.add('locked'); modalClose?.focus(); });
   modalClose?.addEventListener('click', closeModal); modal?.addEventListener('click', e => { if (e.target === modal) closeModal(); }); addEventListener('keydown', e => { if (e.key === 'Escape' && modal?.classList.contains('open')) closeModal(); if (e.key === 'Escape' && clientModal?.classList.contains('open')) closeClientModal(); });
 
   const contactVideo = document.querySelector('.contact-video');
