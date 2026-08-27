@@ -54,6 +54,11 @@ def extract(source: Path, target: Path) -> None:
     bbox = rgba.getbbox()
     if bbox:
         rgba = rgba.crop(bbox)
+    # Keep the complete silhouette away from the UI container edges.
+    padding = max(24, round(max(rgba.size) * 0.045))
+    canvas = Image.new("RGBA", (rgba.width + padding * 2, rgba.height + padding * 2))
+    canvas.alpha_composite(rgba, (padding, padding))
+    rgba = canvas
     rgba.save(target, optimize=True)
 
 
